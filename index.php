@@ -60,6 +60,17 @@
     </div>  <!-- container ends -->
 </div>  <!-- top ends -->
 
+<div class="navbar navbar-default" id="navbar"> <!---navbar navbar-default Starts---> 
+    <div class="container"> <!--- container starts --->
+        <div class="navbar-header"> <!--- navbar-header Starts --->
+            <a class="navbar-brand home" href="index.php">  <!--- navbar navbar-brand home starts--->
+                <img src="images/logo.png" alt="computerfever logo" class="hidden-xs" >
+                <img src="images/logo-small.png" alt=alt="computerfever logo" class="visible-xs" >
+            </a>    <!--- navbar navbar-brand home ends--->
+        </div>  <!--- navbar-header Ends --->
+    </div>  <!--- container ends --->
+</div>   <!---navbar navbar-default Ends---> 
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 </body>
