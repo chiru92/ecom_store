@@ -1,0 +1,17 @@
+<application>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="C:/Program Files/nodejs/node.exe" />
+  </component>
+  <component name="SvnApplicationSettings">
+    <option name="myCheckoutURLs">
+      <list>
+        <option value="http://172.16.130.202/svn/QratiRepo" />
+      </list>
+    </option>
+    <option name="myTypedURLs">
+      <list>
+        <option value="http://172.16.130.202/svn/QratiRepo" />
+      </list>
+    </option>
+  </component>
+</application>
