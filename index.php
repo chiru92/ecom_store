@@ -60,13 +60,22 @@
     </div>  <!-- container ends -->
 </div>  <!-- top ends -->
 
-<div class="navbar navbar-default" id="navbar"> <!---navbar navbar-default Starts---> 
+<div class="navbar navbar-default" id="navbar"> <!---navbar navbar-default Starts--->
     <div class="container"> <!--- container starts --->
         <div class="navbar-header"> <!--- navbar-header Starts --->
             <a class="navbar-brand home" href="index.php">  <!--- navbar navbar-brand home starts--->
-                <img src="images/logo.png" alt="computerfever logo" class="hidden-xs" >
-                <img src="images/logo-small.png" alt=alt="computerfever logo" class="visible-xs" >
+                <img src="images/logo.png" alt="computerfever logo" class="hidden-xs" width="64" >
+                <img src="images/logo-small.png" alt="computerfever logo" class="visible-xs" width="64">
             </a>    <!--- navbar navbar-brand home ends--->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                <span class="sr-only">Toggle Navigation</span>
+                <i class="fa fa-align-justify"></i>
+            </button>
+            <button type="button" class="navbar-toggle" data-toggle="navbar-toggle" data-target="#search">
+                <span class="sr-only">Toggle Search</span>
+                <i class="fa fa-search"></i>
+
+            </button>
         </div>  <!--- navbar-header Ends --->
     </div>  <!--- container ends --->
 </div>   <!---navbar navbar-default Ends---> 
