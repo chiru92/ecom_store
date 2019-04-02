@@ -79,16 +79,44 @@
         </div>  <!--- navbar-header Ends --->
         <div class="navbar-collapse collapse" id="navigation">  <!--- navbar-collapse collapse start--->
             <div class="padding-nav">    <!--- padding-nav start--->
-                <ul class="nav navbar-nav navbar-left">
+                <ul class="nav navbar-nav navbar-left"> <!--- nav navbar-nav navbar-left Start --->
                     <li class="active">
                          <a href="index.php"> Home </a>
                     </li>
                     <li>
                        <a href="shop.php"> Shop </a>
                     </li>
-                </ul>
+                    <li>
+                        <a href="checkout.php"> My Account </a>
+                    </li>
+                    <li>
+                        <a href="cart.php"> Shopping Cart </a>
+                    </li>
+                    <li>
+                        <a href="contact.php"> Contact Us </a>
+                    </li>
+                </ul>   <!--- nav navbar-nav navbar-left Ends --->
             </div>      <!--- padding-nav ends--->
-
+            <a class="btn btn-primary navbar-btn right" href="cart.php">    <!--- btn btn-primary navbar-btn right Start --->
+                <i class="fa fa-shopping-cart"></i>
+                <span> 4 items in cart </span>
+            </a>    <!--- btn btn-primary navbar-btn right Ends --->
+            <div class="navbar-collapse collapse right">    <!--- navbar-collapse collapse right Start --->
+                    <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle Search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+            </div>  <!--- navbar-collapse collapse right Ends --->
+            <div class="collapse clearfix" id="search"> <!--- collapse clearfix Start --->
+                <form class="navbar-form" method="get" action="results.php">       <!--- navbar-form Starts --->
+                    <div class="input-group">  <!--- input-group start --->
+                        <input class="form-control" type="text" placeholder="Search" name="user_query" required>
+                        <button type="submit" value="Search" name="search" class="btn btn-primary">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>  <!--- input-group Ends --->
+                </form>     <!--- navbar-form Ends --->
+            </div>  <!--- collapse clearfix Ends --->
         </div>   <!--- navbar-collapse collapse ends--->
     </div>  <!--- container ends --->
 </div>   <!---navbar navbar-default Ends---> 
