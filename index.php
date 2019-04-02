@@ -11,7 +11,7 @@
     
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
     <link href="styles/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script> -->
@@ -77,6 +77,19 @@
 
             </button>
         </div>  <!--- navbar-header Ends --->
+        <div class="navbar-collapse collapse" id="navigation">  <!--- navbar-collapse collapse start--->
+            <div class="padding-nav">    <!--- padding-nav start--->
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active">
+                         <a href="index.php"> Home </a>
+                    </li>
+                    <li>
+                       <a href="shop.php"> Shop </a>
+                    </li>
+                </ul>
+            </div>      <!--- padding-nav ends--->
+
+        </div>   <!--- navbar-collapse collapse ends--->
     </div>  <!--- container ends --->
 </div>   <!---navbar navbar-default Ends---> 
 
