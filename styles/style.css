@@ -70,3 +70,106 @@ body {
     padding: 0 5px;
     color: #f7f7f7;
 }
+
+/*Header Styles*/
+
+.navbar {
+    background: white;
+}
+.navbar-collapse .right {
+    float: right;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 10px 15px;
+    line-height: 20px;
+    font-size: 18px;
+    height: 70px;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+}
+
+.navbar ul.nav > li > a {
+    text-transform:  uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.padding-nav {
+    padding-top: 10px;
+}
+
+.navbar ul.nav > li > a:hover {
+    background:  #e7e7e7;
+}
+
+.btn-primary {
+    color: rgb(255,255,255);
+    background-color:  rgb(79, 191, 168);
+    border-color: rgb(65,179,156);
+}
+
+#search .navbar-form{
+    float: right;
+}
+#search {
+    clear: both;
+    border-top: solid 1px #9adacd;
+    text-align: right;
+}
+#search .navbar-form .input-group {
+    display: table;
+}
+#search .navbar-form .input-group .form-control {
+    width: 100%;
+}
+
+/*Slider Styles*/
+#slider {
+    margin-bottom: 40px;
+}
+
+/*Advantages Styles*/
+.box {
+    background: #fff;
+    margin:  0 0 30px;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+#advantages {
+    text-align: center;
+}
+#advantages .box .icon {
+    position: absolute;
+    font-size: 120px;
+    width: 100%;
+    text-align: center;
+    top: -20px;
+    height: 100%;
+    float: left;
+    color:  #eeeeee;
+    transition: all 0.2s ease-out;
+    z-index: 1;
+    box-sizing: border-box;
+}
+#advantages .box h3 {
+    position: relative;
+    margin:  0 0 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    z-index: 2;
+}
+#advantages .box h3 a:hover {
+    text-decoration: none;
+}
+#advantages .box p {
+    position: relative;
+    color:  #555555;
+    z-index: 2;
+}

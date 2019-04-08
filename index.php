@@ -11,10 +11,14 @@
     
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
     <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script> -->
+
+<!--    <script src="js/bootstrap.min.js"></script>-->
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
 
@@ -64,27 +68,27 @@
     <div class="container"> <!--- container starts --->
         <div class="navbar-header"> <!--- navbar-header Starts --->
             <a class="navbar-brand home" href="index.php">  <!--- navbar navbar-brand home starts--->
-                <img src="images/logo.png" alt="computerfever logo" class="hidden-xs" width="64" >
-                <img src="images/logo-small.png" alt="computerfever logo" class="visible-xs" width="64">
+                <img src="images/logo.png" alt="chiru large logo" class="hidden-xs" width="64" >
+                <img src="images/logo-small.png" alt="chiru small logo" class="visible-xs" width="64">
             </a>    <!--- navbar navbar-brand home ends--->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
                 <span class="sr-only">Toggle Navigation</span>
                 <i class="fa fa-align-justify"></i>
             </button>
-            <button type="button" class="navbar-toggle" data-toggle="navbar-toggle" data-target="#search">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
                 <span class="sr-only">Toggle Search</span>
                 <i class="fa fa-search"></i>
 
             </button>
         </div>  <!--- navbar-header Ends --->
-        <div class="navbar-collapse collapse" id="navigation">  <!--- navbar-collapse collapse start--->
+        <div class="collapse navbar-collapse" id="navigation">  <!--- navbar-collapse collapse start--->
             <div class="padding-nav">    <!--- padding-nav start--->
                 <ul class="nav navbar-nav navbar-left"> <!--- nav navbar-nav navbar-left Start --->
                     <li class="active">
-                         <a href="index.php"> Home </a>
+                        <a href="index.php"> Home </a>
                     </li>
                     <li>
-                       <a href="shop.php"> Shop </a>
+                        <a href="shop.php"> Shop </a>
                     </li>
                     <li>
                         <a href="checkout.php"> My Account </a>
@@ -102,18 +106,20 @@
                 <span> 4 items in cart </span>
             </a>    <!--- btn btn-primary navbar-btn right Ends --->
             <div class="navbar-collapse collapse right">    <!--- navbar-collapse collapse right Start --->
-                    <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
-                        <span class="sr-only">Toggle Search</span>
-                        <i class="fa fa-search"></i>
-                    </button>
+                <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
+                    <span class="sr-only">Toggle Search</span>
+                    <i class="fa fa-search"></i>
+                </button>
             </div>  <!--- navbar-collapse collapse right Ends --->
             <div class="collapse clearfix" id="search"> <!--- collapse clearfix Start --->
                 <form class="navbar-form" method="get" action="results.php">       <!--- navbar-form Starts --->
                     <div class="input-group">  <!--- input-group start --->
                         <input class="form-control" type="text" placeholder="Search" name="user_query" required>
-                        <button type="submit" value="Search" name="search" class="btn btn-primary">
-                            <i class="fa fa-search"></i>
-                        </button>
+                        <span class="input-group-btn">  <!--- input-group-btn --->
+                            <button type="submit" value="Search" name="search" class="btn btn-primary">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
                     </div>  <!--- input-group Ends --->
                 </form>     <!--- navbar-form Ends --->
             </div>  <!--- collapse clearfix Ends --->
@@ -121,8 +127,88 @@
     </div>  <!--- container ends --->
 </div>   <!---navbar navbar-default Ends---> 
 
+<div class="container" id="slider">     <!--- Container starts --->
+    <div class="col-md-12">     <!--- col-md-12 Starts --->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">       <!--- carousel starts--->
+            <ol class="carousel-indicators">        <!--- carousel-indicators Starts --->
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>       <!--- carousel-indicators Endss --->
+            <div class="carousel-inner">        <!--- carousel-inner Starts --->
+                <div class="item active">
+                    <img src="admin_area/slides_images/1.jpg" width="1280">
+                </div>
+                <div class="item">
+                    <img src="admin_area/slides_images/2.jpeg" width="1280">
+                </div>
+                <div class="item">
+                    <img src="admin_area/slides_images/3.jpg" width="1280">
+                </div>
+                <div class="item">
+                    <img src="admin_area/slides_images/4.png" width="1280">
+                </div>
+            </div>      <!--- carousel-inner Ends --->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">      <!--- left carousel-control Starts --->
+                <span class="glyphicon glyphicon-chevron-left"> </span>
+                <span class="sr-only"> Previous </span>
+            </a>    <!--- left carousel-control Ends --->
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">     <!--- right carousel-control Starts --->
+                <span class="glyphicon glyphicon-chevron-right"> </span>
+                <span class="sr-only"> Next </span>
+            </a>       <!--- right carousel-control Ends --->
+        </div>      <!--- carousel ends--->
+    </div>      <!--- col-md-12 ends --->
+
+</div>      <!--- Container ends --->
+
+<div id="advantages">       <!--- advantages starts --->
+    <div class="container">     <!--- container Starts --->
+        <div class="same-height-row">       <!--- same-height-row Starts --->
+            <div class="col-sm-4">      <!--- col-sm-4 Starts --->
+                <div class="box same-height">      <!--- box same-height Starts --->
+                    <div class="icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <h3><a href="#"> WE LOVE OUR CUSTOMERS </a></h3>
+                    <p>
+                        We are known to provide best possible service ever.
+                    </p>
+                </div>  <!--- box same-height Ends --->
+            </div>      <!--- col-sm-4 Ends --->
+
+            <div class="col-sm-4"> <!--- col-sm-4 Starts --->
+                <div class="box same-height">       <!--- box same-height Starts --->
+                    <div class="icon">
+                        <i class="fa fa-tags"></i>
+                    </div>
+                    <h3><a href="#"> BEST PRICES </a></h3>
+                    <p>
+                        You can check on all others sites about the prices and than compare with us.
+                    </p>
+                </div>      <!--- box same-height Starts --->
+            </div>      <!--- col-sm-4 Ends --->
+
+            <div class="col-sm-4"> <!--- col-sm-4 Starts --->
+                <div class="box same-height">       <!--- box same-height Starts --->
+                    <div class="icon">
+                        <i class="fa fa-thumbs-up"></i>
+                    </div>
+                    <h3><a href="#"> 100% SATISFACTION GUARANTEED </a></h3>
+                    <p>
+                        Free returns on everything for 3 months.
+                    </p>
+                </div>      <!--- box same-height Starts --->
+            </div>      <!--- col-sm-4 Ends --->
+        </div>      <!--- same-height-row Ends --->
+    </div>      <!--- container Endss --->
+</div>      <!--- advantages ends --->
+
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
+
 </body>
 </html>
 
