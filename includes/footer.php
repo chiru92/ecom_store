@@ -67,7 +67,30 @@
                     </span>     <!--- input-group-btn ends --->
                     </div>      <!--- input-group ends --->
                 </form>     <!--- form ends --->
+
+                <hr>
+                <h4> Stay in touch </h4>
+                <p class="social">  <!---social Starts--->
+                    <a href="#"><i class="fa fa-facebook"></i> </a>
+                    <a href="#"><i class="fa fa-twitter"></i> </a>
+                    <a href="#"><i class="fa fa-instagram"></i> </a>
+                    <a href="#"><i class="fa fa-google-plus"></i> </a>
+                    <a href="#"><i class="fa fa-envelope"></i> </a>
+                </p>       <!---social Ends--->
             </div>      <!--- col-sm-6 col-md-3 Ends --->
         </div>      <!---row ends--->
     </div>      <!---container ends--->
 </div>      <!---footer ends--->
+
+<div id="copyright">    <!---copyright Starts--->
+    <div class="container">    <!---container Starts--->
+        <div class="col-md-6">  <!---col-md-6 Starts--->
+            <p class="pull-left"> &copy; 2016 Chiranjit Sarkar</p>
+        </div>  <!---col-md-6 Ends--->
+        <div class="col-md-6">  <!---col-md-6 Starts--->
+            <p class="pull-right">
+                Template by <a href="http://facebook.com/chiru.jrrt">Chiru</a>
+            </p>
+        </div>  <!---col-md-6 Ends--->
+    </div>  <!---container Ends--->
+</div>  <!---copyright Ends--->
