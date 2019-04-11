@@ -344,6 +344,11 @@
         </div>      <!--- col-sm-4 col-sm-6 single ends --->
     </div>      <!--- row ends --->
 </div>      <!--- container ends --->
+
+<?php
+    include("includes/footer.php")
+?>
+?>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script></script>
