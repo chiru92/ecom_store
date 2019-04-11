@@ -205,7 +205,145 @@
     </div>      <!--- container Endss --->
 </div>      <!--- advantages ends --->
 
+<div id="hot">  <!---hot starts --->
+    <div class="box">   <!--- box starts --->
+        <div class="container">     <!--- container starts --->
+            <div class="col-md-12">     <!--- col-md-12 Starts --->
+                <h2>Latest this week</h2>
+            </div>      <!--- col-md-12 Ends --->
+        </div>      <!--- container ends --->
+    </div>      <!--- box ends --->
+</div>      <!---hot ends --->
 
+<div id="content" class="container">    <!--- container starts --->
+    <div class="row">   <!--- row starts --->
+        <div class="col-sm-4 col-sm-6 single">      <!--- col-sm-4 col-sm-6 single starts --->
+            <div class="product">       <!--- product starts --->
+                <a href="details.php">
+                    <img src="admin_area/product_images/product1.jpg" class="img-responsive" >
+                </a>
+                <div class="text">      <!--- text starts --->
+                    <h3><a href="details.php">A Briefer History of Time</a></h3>
+                    <p class="price">$99</p>
+                    <p class="buttons">
+                        <a href="details.php" class="btn btn-default"> View Details </a>
+                        <a href="details.php" class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </a>
+                    </p>
+                </div>      <!--- text ends --->
+            </div>      <!--- product ends --->
+        </div>      <!--- col-sm-4 col-sm-6 single ends --->
+
+        <div class="col-sm-4 col-sm-6 single">      <!--- col-sm-4 col-sm-6 single starts --->
+            <div class="product">       <!--- product starts --->
+                <a href="details.php">
+                    <img src="admin_area/product_images/product2.jpg" class="img-responsive">
+                </a>
+                <div class="text">      <!--- text starts --->
+                    <h3><a href="details.php">A Briefer History of Time</a></h3>
+                    <p class="price">$99</p>
+                    <p class="buttons">
+                        <a href="details.php" class="btn btn-default"> View Details </a>
+                        <a href="details.php" class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </a>
+                    </p>
+                </div>      <!--- text ends --->
+            </div>      <!--- product ends --->
+        </div>      <!--- col-sm-4 col-sm-6 single ends --->
+
+        <div class="col-sm-4 col-sm-6 single">      <!--- col-sm-4 col-sm-6 single starts --->
+            <div class="product">       <!--- product starts --->
+                <a href="details.php">
+                    <img src="admin_area/product_images/product3.jpg" class="img-responsive">
+                </a>
+                <div class="text">      <!--- text starts --->
+                    <h3><a href="details.php">A Briefer History of Time</a></h3>
+                    <p class="price">$99</p>
+                    <p class="buttons">
+                        <a href="details.php" class="btn btn-default"> View Details </a>
+                        <a href="details.php" class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </a>
+                    </p>
+                </div>      <!--- text ends --->
+            </div>      <!--- product ends --->
+        </div>      <!--- col-sm-4 col-sm-6 single ends --->
+
+        <div class="col-sm-4 col-sm-6 single">      <!--- col-sm-4 col-sm-6 single starts --->
+            <div class="product">       <!--- product starts --->
+                <a href="details.php">
+                    <img src="admin_area/product_images/product4.jpg" class="img-responsive">
+                </a>
+                <div class="text">      <!--- text starts --->
+                    <h3><a href="details.php">A Briefer History of Time</a></h3>
+                    <p class="price">$99</p>
+                    <p class="buttons">
+                        <a href="details.php" class="btn btn-default"> View Details </a>
+                        <a href="details.php" class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </a>
+                    </p>
+                </div>      <!--- text ends --->
+            </div>      <!--- product ends --->
+        </div>      <!--- col-sm-4 col-sm-6 single ends --->
+
+        <div class="col-sm-4 col-sm-6 single">      <!--- col-sm-4 col-sm-6 single starts --->
+            <div class="product">       <!--- product starts --->
+                <a href="details.php">
+                    <img src="admin_area/product_images/product5.jpg" class="img-responsive">
+                </a>
+                <div class="text">      <!--- text starts --->
+                    <h3><a href="details.php">A Briefer History of Time</a></h3>
+                    <p class="price">$99</p>
+                    <p class="buttons">
+                        <a href="details.php" class="btn btn-default"> View Details </a>
+                        <a href="details.php" class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </a>
+                    </p>
+                </div>      <!--- text ends --->
+            </div>      <!--- product ends --->
+        </div>      <!--- col-sm-4 col-sm-6 single ends --->
+
+        <div class="col-sm-4 col-sm-6 single">      <!--- col-sm-4 col-sm-6 single starts --->
+            <div class="product">       <!--- product starts --->
+                <a href="details.php">
+                    <img src="admin_area/product_images/product6.jpg" class="img-responsive">
+                </a>
+                <div class="text">      <!--- text starts --->
+                    <h3><a href="details.php">A Briefer History of Time</a></h3>
+                    <p class="price">$99</p>
+                    <p class="buttons">
+                        <a href="details.php" class="btn btn-default"> View Details </a>
+                        <a href="details.php" class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </a>
+                    </p>
+                </div>      <!--- text ends --->
+            </div>      <!--- product ends --->
+        </div>      <!--- col-sm-4 col-sm-6 single ends --->
+
+        <div class="col-sm-4 col-sm-6 single">      <!--- col-sm-4 col-sm-6 single starts --->
+            <div class="product">       <!--- product starts --->
+                <a href="details.php">
+                    <img src="admin_area/product_images/product7.jpeg" class="img-responsive">
+                </a>
+                <div class="text">      <!--- text starts --->
+                    <h3><a href="details.php">A Briefer History of Time</a></h3>
+                    <p class="price">$99</p>
+                    <p class="buttons">
+                        <a href="details.php" class="btn btn-default"> View Details </a>
+                        <a href="details.php" class="btn btn-primary">
+                            <i class="fa fa-shopping-cart"></i> Add to cart
+                        </a>
+                    </p>
+                </div>      <!--- text ends --->
+            </div>      <!--- product ends --->
+        </div>      <!--- col-sm-4 col-sm-6 single ends --->
+    </div>      <!--- row ends --->
+</div>      <!--- container ends --->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script></script>
