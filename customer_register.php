@@ -1,3 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: user
+ * Date: 4/13/2019
+ * Time: 1:52 PM
+ */
+?>
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: user
+ * Date: 4/13/2019
+ * Time: 1:01 PM
+ */
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +57,7 @@
                 </li>
 
                 <li>
-                    <a href="customer/my_account.php">
+                    <a href="checkout.php">
                         My Account
                     </a>
                 </li>
@@ -81,14 +99,14 @@
         <div class="collapse navbar-collapse" id="navigation">  <!--- navbar-collapse collapse start--->
             <div class="padding-nav">    <!--- padding-nav start--->
                 <ul class="nav navbar-nav navbar-left"> <!--- nav navbar-nav navbar-left Start --->
-                    <li>
+                    <li class="active">
                         <a href="index.php"> Home </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="shop.php"> Shop </a>
                     </li>
                     <li>
-                        <a href="customer/my_account.php"> My Account </a>
+                        <a href="checkout.php"> My Account </a>
                     </li>
                     <li>
                         <a href="cart.php"> Shopping Cart </a>
@@ -132,7 +150,7 @@
                 <li>
                     <a href="index.php">Home</a>
                 </li>
-                <li>Shop</li>
+                <li>Register</li>
             </ul>    <!--- breadcrumb Ends --->
 
         </div>  <!--- col-md-12 Ends --->
@@ -141,92 +159,55 @@
             <?php include("includes/sidebar.php") ?>
         </div>  <!--- col-md-3 Ends --->
 
-        <div class="col-md-9">  <!--- col-md-9 Starts --->
+        <div class="col-md-9">     <!--- col-md-9 Starts --->
             <div class="box">   <!--- box Starts --->
-                <h1>Shop</h1>
-                <p>
-                    A simple yet stylish interface that doesn't beat around the bush. It tells you the best deals in the store.
-                </p>
+                <div class="box-header">    <!--- box-header Starts --->
+                    <center>    <!--- center Starts --->
+                        <h2>Register a New Account</h2>
+
+                    </center>   <!--- center Ends --->
+                </div>  <!--- box-header Ends --->
+                <form action="customer_register.php" method="post" enctype="multipart/form-data">   <!--- form Starts --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Customer Name</label>
+                        <input type="text" class="form-control" name="c_name" required>
+                    </div>  <!--- form-group Ends --->
+
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Customer Email</label>
+                        <input type="text" class="form-control" name="c_email" required>
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label> Customer Password </label>
+                        <input type="password" class="form-control" name="c_pass" required>
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Customer Country</label>
+                        <input type="text" class="form-control" name="c_country" required>
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Customer City</label>
+                        <input type="text" class="form-control" name="c_city" required>
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Customer Contact</label>
+                        <input type="text" class="form-control" name="c_contact" required>
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Customer Address</label>
+                        <input type="text" class="form-control" name="c_address" required>
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Customer Image</label>
+                        <input type="file" class="form-control" name="c_image" required>
+                    </div>  <!--- form-group Ends --->
+                    <div class="text-center">   <!--- text-center Starts --->
+                        <button type="submit" name="register" class="btn btn-primary">
+                            <i class="fa fa-user-md"></i>  Register
+                        </button>
+                    </div>  <!--- text-center Ends --->
+                </form><!--- form Ends --->
             </div>  <!--- box Ends --->
-
-            <div class="row">   <!--- row Starts --->
-                <div class="col-md-4 col-sm-6 center-responsive">   <!--- col-md-4 col-sm-6 center-responsive Starts --->
-                    <div class="product">   <!--- product Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product1.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3>
-                                <a href="details.php"> A Briefer History of Time </a>
-                            </h3>
-                            <p class="price">$99</p>
-                            <p class="buttons">
-                                <a href="details.php" class="btn btn-default">View details</a>
-                                <a href="details.php" class="btn btn-primary">
-                                    <i class="fa fa-shopping-cart"></i> Add to Cart
-                                </a>
-                            </p>
-                        </div>      <!--- text Ends --->
-                    </div>      <!--- product Ends --->
-                </div>  <!--- col-md-4 col-sm-6 center-responsive Ends --->
-
-                <div class="col-md-4 col-sm-6 center-responsive">   <!--- col-md-4 col-sm-6 center-responsive Starts --->
-                    <div class="product">   <!--- product Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product2.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3>
-                                <a href="details.php"> A Briefer History of Time </a>
-                            </h3>
-                            <p class="price">$99</p>
-                            <p class="buttons">
-                                <a href="details.php" class="btn btn-default">View details</a>
-                                <a href="details.php" class="btn btn-primary">
-                                    <i class="fa fa-shopping-cart"></i> Add to Cart
-                                </a>
-                            </p>
-                        </div>      <!--- text Ends --->
-                    </div>      <!--- product Ends --->
-                </div>  <!--- col-md-4 col-sm-6 center-responsive Ends --->
-
-                <div class="col-md-4 col-sm-6 center-responsive">   <!--- col-md-4 col-sm-6 center-responsive Starts --->
-                    <div class="product">   <!--- product Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product3.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3>
-                                <a href="details.php"> A Briefer History of Time </a>
-                            </h3>
-                            <p class="price">$99</p>
-                            <p class="buttons">
-                                <a href="details.php" class="btn btn-default">View details</a>
-                                <a href="details.php" class="btn btn-primary">
-                                    <i class="fa fa-shopping-cart"></i> Add to Cart
-                                </a>
-                            </p>
-                        </div>      <!--- text Ends --->
-                    </div>      <!--- product Ends --->
-                </div>  <!--- col-md-4 col-sm-6 center-responsive Ends --->
-
-            </div>  <!--- row Ends --->
-
-            <center>       <!--- center Ends --->
-                <ul class="pagination">     <!--- pagination Starts --->
-                    <li><a href="shop.php">First Page</a> </li>
-                    <li><a href="shop.php">1</a> </li>
-                    <li><a href="shop.php">2</a> </li>
-                    <li><a href="shop.php">3</a> </li>
-                    <li><a href="shop.php">4</a> </li>
-                    <li><a href="shop.php">5</a> </li>
-                    <li><a href="shop.php">Last Page</a> </li>
-
-                </ul>   <!--- pagination Ends --->
-            </center>   <!--- center Ends --->
         </div>  <!--- col-md-9 Ends --->
 
     </div>  <!--- Container Ends --->
@@ -240,3 +221,4 @@ include("includes/footer.php")
 
 </body>
 </html>
+

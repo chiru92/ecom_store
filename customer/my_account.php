@@ -1,3 +1,13 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: user
+ * Date: 4/13/2019
+ * Time: 2:22 PM
+ */
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,25 +43,25 @@
         <div class="col-md-12">  <!-- col-md-6 starts -->
             <ul class="menu" >   <!-- menu starts -->
                 <li>
-                    <a href="customer_register.php">
+                    <a href="../customer_register.php">
                         Register
                     </a>
                 </li>
 
                 <li>
-                    <a href="customer/my_account.php">
+                    <a href="my_account.php">
                         My Account
                     </a>
                 </li>
 
                 <li>
-                    <a href="cart.php">
+                    <a href="../cart.php">
                         Go to cart
                     </a>
                 </li>
 
                 <li>
-                    <a href="checkout.php">
+                    <a href="../checkout.php">
                         Login
                     </a>
                 </li>
@@ -64,7 +74,7 @@
 <div class="navbar navbar-default" id="navbar"> <!---navbar navbar-default Starts--->
     <div class="container"> <!--- container starts --->
         <div class="navbar-header"> <!--- navbar-header Starts --->
-            <a class="navbar-brand home" href="index.php">  <!--- navbar navbar-brand home starts--->
+            <a class="navbar-brand home" href="../index.php">  <!--- navbar navbar-brand home starts--->
                 <img src="images/logo.png" alt="chiru large logo" class="hidden-xs" width="64" >
                 <img src="images/logo-small.png" alt="chiru small logo" class="visible-xs" width="64">
             </a>    <!--- navbar navbar-brand home ends--->
@@ -82,19 +92,19 @@
             <div class="padding-nav">    <!--- padding-nav start--->
                 <ul class="nav navbar-nav navbar-left"> <!--- nav navbar-nav navbar-left Start --->
                     <li>
-                        <a href="index.php"> Home </a>
+                        <a href="../index.php"> Home </a>
+                    </li>
+                    <li>
+                        <a href="../shop.php"> Shop </a>
                     </li>
                     <li class="active">
-                        <a href="shop.php"> Shop </a>
+                        <a href="my_account.php"> My Account </a>
                     </li>
                     <li>
-                        <a href="customer/my_account.php"> My Account </a>
+                        <a href="../cart.php"> Shopping Cart </a>
                     </li>
                     <li>
-                        <a href="cart.php"> Shopping Cart </a>
-                    </li>
-                    <li>
-                        <a href="contact.php"> Contact Us </a>
+                        <a href="../contact.php"> Contact Us </a>
                     </li>
                 </ul>   <!--- nav navbar-nav navbar-left Ends --->
             </div>      <!--- padding-nav ends--->
@@ -132,7 +142,7 @@
                 <li>
                     <a href="index.php">Home</a>
                 </li>
-                <li>Shop</li>
+                <li>My Account</li>
             </ul>    <!--- breadcrumb Ends --->
 
         </div>  <!--- col-md-12 Ends --->
@@ -143,90 +153,13 @@
 
         <div class="col-md-9">  <!--- col-md-9 Starts --->
             <div class="box">   <!--- box Starts --->
-                <h1>Shop</h1>
-                <p>
-                    A simple yet stylish interface that doesn't beat around the bush. It tells you the best deals in the store.
-                </p>
+                <?php
+                if(isset($_GET['my_orders']))
+                {
+                    include("my_orders.php");
+                }
+                ?>
             </div>  <!--- box Ends --->
-
-            <div class="row">   <!--- row Starts --->
-                <div class="col-md-4 col-sm-6 center-responsive">   <!--- col-md-4 col-sm-6 center-responsive Starts --->
-                    <div class="product">   <!--- product Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product1.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3>
-                                <a href="details.php"> A Briefer History of Time </a>
-                            </h3>
-                            <p class="price">$99</p>
-                            <p class="buttons">
-                                <a href="details.php" class="btn btn-default">View details</a>
-                                <a href="details.php" class="btn btn-primary">
-                                    <i class="fa fa-shopping-cart"></i> Add to Cart
-                                </a>
-                            </p>
-                        </div>      <!--- text Ends --->
-                    </div>      <!--- product Ends --->
-                </div>  <!--- col-md-4 col-sm-6 center-responsive Ends --->
-
-                <div class="col-md-4 col-sm-6 center-responsive">   <!--- col-md-4 col-sm-6 center-responsive Starts --->
-                    <div class="product">   <!--- product Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product2.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3>
-                                <a href="details.php"> A Briefer History of Time </a>
-                            </h3>
-                            <p class="price">$99</p>
-                            <p class="buttons">
-                                <a href="details.php" class="btn btn-default">View details</a>
-                                <a href="details.php" class="btn btn-primary">
-                                    <i class="fa fa-shopping-cart"></i> Add to Cart
-                                </a>
-                            </p>
-                        </div>      <!--- text Ends --->
-                    </div>      <!--- product Ends --->
-                </div>  <!--- col-md-4 col-sm-6 center-responsive Ends --->
-
-                <div class="col-md-4 col-sm-6 center-responsive">   <!--- col-md-4 col-sm-6 center-responsive Starts --->
-                    <div class="product">   <!--- product Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product3.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3>
-                                <a href="details.php"> A Briefer History of Time </a>
-                            </h3>
-                            <p class="price">$99</p>
-                            <p class="buttons">
-                                <a href="details.php" class="btn btn-default">View details</a>
-                                <a href="details.php" class="btn btn-primary">
-                                    <i class="fa fa-shopping-cart"></i> Add to Cart
-                                </a>
-                            </p>
-                        </div>      <!--- text Ends --->
-                    </div>      <!--- product Ends --->
-                </div>  <!--- col-md-4 col-sm-6 center-responsive Ends --->
-
-            </div>  <!--- row Ends --->
-
-            <center>       <!--- center Ends --->
-                <ul class="pagination">     <!--- pagination Starts --->
-                    <li><a href="shop.php">First Page</a> </li>
-                    <li><a href="shop.php">1</a> </li>
-                    <li><a href="shop.php">2</a> </li>
-                    <li><a href="shop.php">3</a> </li>
-                    <li><a href="shop.php">4</a> </li>
-                    <li><a href="shop.php">5</a> </li>
-                    <li><a href="shop.php">Last Page</a> </li>
-
-                </ul>   <!--- pagination Ends --->
-            </center>   <!--- center Ends --->
         </div>  <!--- col-md-9 Ends --->
 
     </div>  <!--- Container Ends --->
