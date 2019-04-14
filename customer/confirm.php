@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: user
- * Date: 4/13/2019
- * Time: 2:22 PM
+ * Date: 4/15/2019
+ * Time: 2:13 AM
  */
 ?>
 
@@ -151,27 +151,47 @@
             <?php include("includes/sidebar.php") ?>
         </div>  <!--- col-md-3 Ends --->
 
-        <div class="col-md-9">  <!--- col-md-9 Starts --->
+        <div class="col-md-9">     <!--- col-md-9 Starts --->
             <div class="box">   <!--- box Starts --->
-                <?php
-                if(isset($_GET['my_orders']))
-                {
-                    include("my_orders.php");
-                }
-                if(isset($_GET['pay_offline'])) {
-                    include ("pay_offline.php");
-                }
+                <h1 align="center"> Please Confirm Your Payment </h1>
+                <form action="confirm.php" method="post" enctype="multipart/form-data"> <!--- form Starts --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Invoice No:</label>
+                        <input type="text" class="form-control" name="invoice_no">
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Amount Sent:</label>
+                        <input type="text" class="form-control" name="amount_sent">
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Invoice No:</label>
+                        <select name="payment_mode" class="form-control">
+                            <option>Select Payment Mode</option>
+                            <option>Bank Transfer</option>
+                            <option>Credit/Debit Card</option>
+                            <option>Mobile Wallet</option>
+                            <option>UPI Transfer</option>
+                        </select>
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Transaction/Reference Id:</label>
+                        <input type="text" class="form-control" name="ref_no">
+                    </div>  <!--- form-group Ends --->
+                    <div class="form-group">    <!--- form-group Starts --->
+                        <label>Credit/Debit Card Details:</label>
+                        <input type="text" class="form-control" name="card_no">
+                    </div>  <!--- form-group Ends ---><div class="form-group">    <!--- form-group Starts --->
+                        <label>Payment Date:</label>
+                        <input type="text" class="form-control" name="date">
+                    </div>  <!--- form-group Ends --->
 
-                if(isset($_GET['edit_account'])) {
-                    include("edit_account.php");
-                }
-                if(isset($_GET['change_pass'])) {
-                    include ("change_pass.php");
-                }
-                if(isset($_GET['delete_account'])) {
-                    include ("delete_account.php");
-                }
-                ?>
+                    <div class="text-center">      <!--- text-center Starts --->
+                        <button type="submit" name="confirm_payment" class="btn btn-primary btn-lg">
+                            <i class="fa fa-user-md"></i> Confirm Payment
+                        </button>
+                    </div>  <!--- text-center Ends --->
+
+                </form>     <!--- form Starts --->
             </div>  <!--- box Ends --->
         </div>  <!--- col-md-9 Ends --->
 
@@ -186,3 +206,4 @@ include("includes/footer.php")
 
 </body>
 </html>
+
