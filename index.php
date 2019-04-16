@@ -1,6 +1,10 @@
 <!-- https://github.com/chiru92/ecom_store -->
 
 
+<?php
+    include("includes/db.php")
+?>
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -137,18 +141,43 @@
                 <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>       <!--- carousel-indicators Endss --->
             <div class="carousel-inner">        <!--- carousel-inner Starts --->
-                <div class="item active">
-                    <img src="admin_area/slides_images/1.jpg" width="1280">
-                </div>
-                <div class="item">
-                    <img src="admin_area/slides_images/2.jpeg" width="1280">
-                </div>
-                <div class="item">
-                    <img src="admin_area/slides_images/3.jpg" width="1280">
-                </div>
-                <div class="item">
-                    <img src="admin_area/slides_images/4.png" width="1280">
-                </div>
+<!--                <div class="item active">-->
+<!--                    <img src="admin_area/slides_images/1.jpg" width="1280">-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <img src="admin_area/slides_images/2.jpeg" width="1280">-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <img src="admin_area/slides_images/3.jpg" width="1280">-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <img src="admin_area/slides_images/4.png" width="1280">-->
+<!--                </div>-->
+                <?php
+                    $get_slides = "select * from slider LIMIT 0,1";
+                    $run_slides = mysqli_query($connect,$get_slides);
+                    while($row_slides = mysqli_fetch_array($run_slides)) {
+                        $slide_name = $row_slides['slide_name'];
+                        $slide_image = $row_slides['slide_image'];
+                        echo "
+                            <div class='item active'>
+                                <img src='admin_area/slides_images/$slide_image'>
+                            </div>";
+                    }
+                    ?>
+
+                <?php
+                $get_slides = "select * from slider LIMIT 1,3";
+                $run_slides = mysqli_query($connect,$get_slides);
+                while($row_slides = mysqli_fetch_array($run_slides)) {
+                    $slide_name = $row_slides['slide_name'];
+                    $slide_image = $row_slides['slide_image'];
+                    echo "
+                            <div class='item'>
+                                <img src='admin_area/slides_images/$slide_image'>
+                            </div>";
+                }
+                ?>
             </div>      <!--- carousel-inner Ends --->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">      <!--- left carousel-control Starts --->
                 <span class="glyphicon glyphicon-chevron-left"> </span>
