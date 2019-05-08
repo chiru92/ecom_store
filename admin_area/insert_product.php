@@ -155,9 +155,9 @@
         $product_img2 = $_FILES['product_img2']['name'];
         $product_img3 = $_FILES['product_img3']['name'];
 
-        $temp_name1 = $_FILES['product_img1']['temp_name'];
-        $temp_name2 = $_FILES['product_img2']['temp_name'];
-        $temp_name3 = $_FILES['product_img3']['temp_name'];
+        $temp_name1 = $_FILES['product_img1']['tmp_name'];
+        $temp_name2 = $_FILES['product_img2']['tmp_name'];
+        $temp_name3 = $_FILES['product_img3']['tmp_name'];
 
         move_uploaded_file($temp_name1,"product_images/$product_img1");
         move_uploaded_file($temp_name2,"product_images/$product_img2");
