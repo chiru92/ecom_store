@@ -29,11 +29,31 @@
             <div class="col-sm-6 col-md-3">     <!--- col-sm-6 col-md-3 Starts --->
                 <h4> Top Products Categories </h4>
                 <ul>    <!--- ul Starts --->
-                    <li><a href="#">Jackets</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Shoes</a></li>
-                    <li><a href="#">Coats</a></li>
-                    <li><a href="#">T-Shirts</a></li>
+<!--                    <li><a href="#">Jackets</a></li>-->
+<!--                    <li><a href="#">Accessories</a></li>-->
+<!--                    <li><a href="#">Shoes</a></li>-->
+<!--                    <li><a href="#">Coats</a></li>-->
+<!--                    <li><a href="#">T-Shirts</a></li>-->
+
+                    <?php
+                        $get_p_cats = "select * from product_categories";
+                        $run_p_cats = mysqli_query($connect, $get_p_cats);
+
+//                        $tblCnt = 0;
+                        while ($row_p_cats = mysqli_fetch_array($run_p_cats)) {
+                            $p_cat_id = $row_p_cats['p_cat_id'];
+                            $p_cat_title = $row_p_cats['p_cat_title'];
+                            echo "<li> <a href='shop.php?p_cat_id'>$p_cat_title</a> </li> ";
+
+//                            $tblCnt++;
+//                            #echo $tbl[0]."<br />\n";
+//                            if (!$tblCnt) {
+//                                echo "There are no row <br />\n";
+//                            } else {
+//                                echo "There are $tblCnt rows $p_cat_id $p_cat_title<br />\n";
+//                            }
+                        }
+                    ?>
                 </ul>   <!--- ul ends --->
                 <hr class="hidden-md hidden-lg">
             </div>      <!--- col-sm-6 col-md-3 Ends --->

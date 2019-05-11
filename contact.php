@@ -6,6 +6,10 @@
  * Time: 1:01 PM
  */
 ?>
+<?php
+include("includes/db.php");
+include("functions/functions.php");
+?>
 
 <!DOCTYPE html>
 <html>

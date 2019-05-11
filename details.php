@@ -6,6 +6,32 @@
  * Time: 2:48 PM
  */
 ?>
+<?php
+include("includes/db.php");
+include("functions/functions.php");
+?>
+
+<?php
+    if(isset($_GET['pro_id'])) {
+        $product_id = $_GET['pro_id'];
+        $get_product = "select * from products where product_id = '$product_id'";
+        $run_product = mysqli_query($connect, $get_product);
+        $row_product = mysqli_fetch_array($run_product);
+        $p_cat_id = $row_product['p_cat_id'];
+
+        $pro_title = $row_product['product_title'];
+        $pro_price = $row_product['product_price'];
+        $pro_desc = $row_product['product_desc'];
+        $pro_img1 = $row_product['product_img1'];
+        $pro_img2 = $row_product['product_img2'];
+        $pro_img3 = $row_product['product_img3'];
+
+        $get_p_cat = "select * from product_categories where p_cat_id='$p_cat_id'";
+        $run_p_cat = mysqli_query($connect, $get_p_cat);
+        $row_p_cat = mysqli_fetch_array($run_p_cat);
+        $p_cat_title = $row_p_cat['p_cat_title'];
+    }
+?>
 
 
 <!DOCTYPE html>
@@ -142,7 +168,15 @@
                 <li>
                     <a href="index.php">Home</a>
                 </li>
-                <li>Shop</li>
+                <li>
+                    <a href="shop.php">Shop</a>
+                </li>
+                <li>
+                    <a href="shop.php?p_cat=<?php echo $p_cat_id;?>"> <?php echo $p_cat_title;?></a>
+                </li>
+                <li>
+                    <?php echo $pro_title;?>
+                </li>
             </ul>    <!--- breadcrumb Ends --->
 
         </div>  <!--- col-md-12 Ends --->
@@ -166,17 +200,17 @@
                             <div class="carousel-inner">   <!--- carousel-inner Starts --->
                                 <div class="item active">
                                     <center>
-                                        <img src="admin_area/product_images/product1.jpg" class="img-responsive">
+                                        <img src="admin_area/product_images/<?php echo $pro_img1;?>" class="img-responsive">
                                     </center>
                                 </div>
                                 <div class="item">
                                     <center>
-                                        <img src="admin_area/product_images/product1_1.jpg" class="img-responsive">
+                                        <img src="admin_area/product_images/<?php echo $pro_img2;?>" class="img-responsive">
                                     </center>
                                 </div>
                                 <div class="item">
                                     <center>
-                                        <img src="admin_area/product_images/product1_2.jpg">
+                                        <img src="admin_area/product_images/<?php echo $pro_img3;?>">
                                     </center>
                                 </div>
                             </div>  <!--- carousel-inner Ends --->
@@ -197,12 +231,15 @@
 
                 <div class="col-sm-6">     <!--- col-sm-6 Starts --->
                     <div class="box">   <!--- box Starts --->
-                        <h1 class="text-center"> A Briefer History of Time </h1>
-                        <form action="details.php" method="post" class="form-horizontal">      <!--- form-horizontal Starts --->
+                        <h1 class="text-center"> <?php echo $pro_title;?> </h1>
+
+                        <?php add_cart();?>
+                        <form action="details.php?add_cart=<?php echo $product_id;?>" method="post" class="form-horizontal">      <!--- form-horizontal Starts --->
                             <div class="form-group">    <!--- form-group Starts --->
                                 <label class="col-md-5 control-label"> Product Quantity </label>
                                 <div class="col-md-7">  <!--- col-md-7 Starts --->
                                     <select name="product_qty" class="form-control">
+                                        <option>Select quantity</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -215,7 +252,7 @@
                             <div class="form-group">    <!--- form-group Starts --->
                                 <label class="col-md-5 control-label"> Product Edition</label>
                                 <div class="col-md-7">  <!--- col-md-7 Starts --->
-                                    <select name="product_size" class="form-control">
+                                    <select name="product_edition" class="form-control">
                                         <option>Select a Edition</option>
                                         <option>2017 or Older</option>
                                         <option>2018</option>
@@ -224,7 +261,7 @@
                                 </div>  <!--- col-md-7 Ends --->
                             </div>  <!--- form-group Ends --->
 
-                            <p class="price"> $99 </p>
+                            <p class="price">$ <?php echo $pro_price?> </p>
                             <p class="text-center buttons">    <!--- text-center buttons Starts --->
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fa fa-shopping-cart"></i> Add to Cart
@@ -237,17 +274,17 @@
                     <div class="row" id="thumbs">   <!--- row Starts --->
                         <div class="col-xs-4">  <!--- col-xs-4 Starts --->
                             <a href="#" class="thumb">
-                                <img src="admin_area/product_images/product1.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/<?php echo $pro_img1;?>" class="img-responsive">
                             </a>
                         </div>  <!--- col-xs-4 Ends --->
                         <div class="col-xs-4">  <!--- col-xs-4 Starts --->
                             <a href="#" class="thumb">
-                                <img src="admin_area/product_images/product1_1.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/<?php echo $pro_img2;?>" class="img-responsive">
                             </a>
                         </div>  <!--- col-xs-4 Ends --->
                         <div class="col-xs-4">  <!--- col-xs-4 Starts --->
                             <a href="#" class="thumb">
-                                <img src="admin_area/product_images/product1_2.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/<?php echo $pro_img3;?>" class="img-responsive">
                             </a>
                         </div>  <!--- col-xs-4 Ends --->
                     </div><!--- row Ends --->
@@ -259,7 +296,7 @@
                 <p>
                 <h4>Product Details</h4>
                 <p>
-                    A Brief History of Time: From the Big Bang to Black Holes is a popular-science book on cosmology (the study of the universe) by British physicist Stephen Hawking.It was first published in 1988. Hawking wrote the book for nonspecialist readers with no prior knowledge of scientific theories.
+                    <?php echo $pro_desc;?>
                 </p>
                 <h4> Edition </h4>
                 <ul>
@@ -278,48 +315,71 @@
                     </div>      <!--- box same-height headline Ends --->
                 </div>  <!--- col-md-3 col-sm-6 Ends --->
 
-                <div class="center-responsive col-md-3 col-sm-6">   <!--- center-responsive col-md-3 col-sm-6 Starts --->
-                    <div class="product same-height">   <!--- product same-height Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product2.jpg" class="img-responsive">
-                        </a>
+<!--                <div class="center-responsive col-md-3 col-sm-6">   <!--- center-responsive col-md-3 col-sm-6 Starts --->
+<!--                    <div class="product same-height">   <!--- product same-height Starts --->
+<!--                        <a href="details.php">-->
+<!--                            <img src="admin_area/product_images/product2.jpg" class="img-responsive">-->
+<!--                        </a>-->
+<!---->
+<!--                        <div class="text">  <!--- text Starts --->
+<!--                            <h3><a href="details.php"> A Briefer History of Time </a></h3>-->
+<!--                            <p  class="price"> $99 </p>-->
+<!--                        </div>  <!--- text Ends --->
+<!---->
+<!--                    </div>  <!--- product same-height Ends --->
+<!--                </div>      <!--- center-responsive col-md-3 col-sm-6 Ends --->
+<!---->
+<!--                <div class="center-responsive col-md-3 col-sm-6">   <!--- center-responsive col-md-3 col-sm-6 Starts --->
+<!--                    <div class="product same-height">   <!--- product same-height Starts --->
+<!--                        <a href="details.php">-->
+<!--                            <img src="admin_area/product_images/product3.jpg" class="img-responsive">-->
+<!--                        </a>-->
+<!---->
+<!--                        <div class="text">  <!--- text Starts --->
+<!--                            <h3><a href="details.php"> A Briefer History of Time </a></h3>-->
+<!--                            <p  class="price"> $99 </p>-->
+<!--                        </div>  <!--- text Ends --->
+<!---->
+<!--                    </div>  <!--- product same-height Ends --->
+<!--                </div>      <!--- center-responsive col-md-3 col-sm-6 Ends --->
+<!---->
+<!--                <div class="center-responsive col-md-3 col-sm-6">   <!--- center-responsive col-md-3 col-sm-6 Starts --->
+<!--                    <div class="product same-height">   <!--- product same-height Starts --->
+<!--                        <a href="details.php">-->
+<!--                            <img src="admin_area/product_images/product4.jpg" class="img-responsive">-->
+<!--                        </a>-->
+<!---->
+<!--                        <div class="text">  <!--- text Starts --->
+<!--                            <h3><a href="details.php"> A Briefer History of Time </a></h3>-->
+<!--                            <p  class="price"> $99 </p>-->
+<!--                        </div>  <!--- text Ends --->
+<!---->
+<!--                    </div>  <!--- product same-height Ends --->
+<!--                </div>      <!--- center-responsive col-md-3 col-sm-6 Ends --->
 
-                        <div class="text">  <!--- text Starts --->
-                            <h3><a href="details.php"> A Briefer History of Time </a></h3>
-                            <p  class="price"> $99 </p>
-                        </div>  <!--- text Ends --->
-
-                    </div>  <!--- product same-height Ends --->
-                </div>      <!--- center-responsive col-md-3 col-sm-6 Ends --->
-
-                <div class="center-responsive col-md-3 col-sm-6">   <!--- center-responsive col-md-3 col-sm-6 Starts --->
-                    <div class="product same-height">   <!--- product same-height Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product3.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3><a href="details.php"> A Briefer History of Time </a></h3>
-                            <p  class="price"> $99 </p>
-                        </div>  <!--- text Ends --->
-
-                    </div>  <!--- product same-height Ends --->
-                </div>      <!--- center-responsive col-md-3 col-sm-6 Ends --->
-
-                <div class="center-responsive col-md-3 col-sm-6">   <!--- center-responsive col-md-3 col-sm-6 Starts --->
-                    <div class="product same-height">   <!--- product same-height Starts --->
-                        <a href="details.php">
-                            <img src="admin_area/product_images/product4.jpg" class="img-responsive">
-                        </a>
-
-                        <div class="text">  <!--- text Starts --->
-                            <h3><a href="details.php"> A Briefer History of Time </a></h3>
-                            <p  class="price"> $99 </p>
-                        </div>  <!--- text Ends --->
-
-                    </div>  <!--- product same-height Ends --->
-                </div>      <!--- center-responsive col-md-3 col-sm-6 Ends --->
-
+                <?php
+                    $get_products = "select * from products order by rand() LIMIT 0,3";
+                    $run_products = mysqli_query($connect,$get_products);
+                    while($row_products = mysqli_fetch_array($run_products)) {
+                        $pro_id = $row_products['product_id'];
+                        $pro_title = $row_products['product_title'];
+                        $pro_price = $row_products['product_price'];
+                        $pro_img1 = $row_products['product_img1'];
+                        echo "
+                            <div class='center-responsive col-md-3 col-sm-6'>
+                                <div class='product same-height'>
+                                    <a href='details.php?pro_id=$pro_id'>
+                                        <img src='admin_area/product_images/$pro_img1' class='img-responsive'>
+                                    </a>
+                                    <div class='text'>
+                                        <h3><a href='details.php?pro_id=$pro_id'>$pro_title</a></h3>
+                                        <p class='price'>$ $pro_price</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ";
+                    }
+                ?>
 
             </div>  <!--- row same-height-row Ends --->
 

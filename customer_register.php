@@ -8,12 +8,8 @@
 ?>
 
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 4/13/2019
- * Time: 1:01 PM
- */
+include("includes/db.php");
+include("functions/functions.php");
 ?>
 
 <!DOCTYPE html>
